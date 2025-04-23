@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>My Blog</title>
-  <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; }
-    nav a { margin-right: 1rem; }
-    article { margin-bottom: 2rem; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <title>Xu Ling | Blog</title>
 </head>
+
 <body>
   <nav>
     <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
   </nav>
+            
+  <aside class="sidebar"> <!-- 侧边栏 -->
+      
+    <h3>Category</h3>
+    <ul>
+      <li><a href="index.html">Finance</a></li>
+      <li><a href="#blog">Math</a></li>
+      <li><a href="#contact">Coding</a></li>
+      <li><a href="#contact">Others</a></li>
 
-  <h1>Blog</h1>
+    </ul>
 
-  <article>
-    <h2>First Post</h2>
-    <p><em>April 6, 2025</em></p>
-    <p>This is a test blog post. I'm building my personal homepage using GitHub Pages!</p>
-  </article>
+    <h3>Tag</h3>
+    <div class="tags">
+      <span class="tag">Project</span>
+      <span class="tag">Note</span>
+      <br>
+      <span class="tag">中文</span>
+      <span class="tag">English</span>
+    </div>
 
-  <!-- 可以复制更多 <article> 来添加其他博客 -->
+  </aside>
 
-<h2>My PDF</h2>
-<a href="Project_example.pdf" target="_blank">Click here to view or download the PDF</a>
+  <div class="container">
 
-<iframe src="Project_example.pdf" width="100%" height="600px"></iframe>
+    <main class="main">
 
+      <h1>Blog</h1> <!--正文开始-->
+
+      <article>
+        <h2>Introduction to Complex Dynamics in One Dimension</h2>
+
+        <a href="Note_example.pdf" target="_blank">Click here to view or download the PDF</a>
+
+        <p><em>March, 2025</em></p>
+
+        <p>Lecture note by John Erik Fornaess. A note by latex. Reading note for discussion at 2025 spring section.</p>
+
+        <span class="tag">Note</span>
+        <span class="tag">English</span>
+      </article>
+
+      <!--PDF预览窗口
+      <iframe src="Project_example.pdf" width="100%" height="600px"></iframe>
+      -->
+
+      <article>
+        <h2>BRÄNDÉN-KRASIKOV-SHAPIRO TYPE THEOREM FOR LINEAR DIFFERENCE OPERATOR</h2>
+
+        <a href="Project_example.pdf" target="_blank">Click here to view or download the PDF</a>
+
+        <p><em>December, 2024</em></p>
+
+        <p> In this paper, we give a complete characterisation of the entire func
+          tion f which both f and its general linear difference Lf omit zero. It can be seen as a difference version of the Frank-Hellerstein theorem, which can be regarded as a dual version of (localized) Hermite-Poulain theorem in some sense. With this characterisation in hand, we establish a version of Brändén-Krasikov-Shapiro the orem for linear difference operator preserving ΠE(∅). Our method can be extended partially to a meromorphic function with finitely many zeros and poles.</p>
+
+        <span class="tag">Project</span>
+        <span class="tag">English</span>
+      </article>
+
+      </main>
+
+    </div>
+  
+    </div>
+  
 </body>
+
 </html>
