@@ -15,28 +15,41 @@
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
   </nav>
+
+  <button id="toggleSidebar">☰</button> <!--侧边栏折叠按钮-->
             
-  <aside class="sidebar"> <!-- 侧边栏 -->
-      
-    <h3>Category</h3>
-    <ul>
-      <li><a href="index.html">Finance</a></li>
-      <li><a href="#blog">Math</a></li>
-      <li><a href="#contact">Coding</a></li>
-      <li><a href="#contact">Others</a></li>
+  <aside class="sidebar collapsed"> <!-- 侧边栏 -->
+    
+    <div class="sidebar-content">
 
-    </ul>
+      <h3>Category</h3>
+      <ul>
+        <li><a href="index.html">Finance</a></li>
+        <li><a href="#blog">Math</a></li>
+        <li><a href="#contact">Coding</a></li>
+        <li><a href="#contact">Others</a></li>
+      </ul>
 
-    <h3>Tag</h3>
-    <div class="tags">
-      <span class="tag">Project</span>
-      <span class="tag">Note</span>
-      <br>
-      <span class="tag">中文</span>
-      <span class="tag">English</span>
+      <h3>Tag</h3>
+      <div class="tags">
+        <span class="tag">Project</span>
+        <span class="tag">Note</span>
+        <br>
+        <span class="tag">中文</span>
+        <span class="tag">English</span>
+      </div>
     </div>
-
   </aside>
+
+  <!-- 控制折叠的脚本 -->
+  <script> 
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleBtn.addEventListener('click', function() {
+      sidebar.classList.toggle('collapsed');
+    });
+  </script>
 
   <div class="container">
 
