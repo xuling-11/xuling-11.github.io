@@ -1,35 +1,18 @@
 /* 引入 Google Fonts 的字体在 HTML <head> 中加载 */
 
+/* 全局格式 */
 body {
   background-color: #121212;
   color: #CCCCCC;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
-/* 容器居中限制宽度 */
-.container {
-  max-width: 700px;
-  margin: auto;
-  padding: 2rem;
-}
-
-header {
-  margin-bottom: 20px; /* 给 header 增加一些下边距 */
-}
-
-img {
-  float: right; /* 头像浮动到右侧 */
-  width: 175px;
-  height: 175px;
-  border-radius: 5%;
-  margin-left: 20px; /* 头像与文字之间的间距 */
-}
-
-main {
-  overflow: hidden; /* 清除浮动，确保页面布局正确 */
+/* 强调字体 */
+strong {
+  color: #FFFFFF; 
 }
 
 /* 标题样式 */
@@ -42,12 +25,16 @@ h1, h2, h3 {
 
 /* 链接样式 */
 a {
-  color: #FFFFFF;
+  color: #37908a;
   font-style: italic;
   text-decoration: none;
 }
+
 a:hover {
   color: #37908a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(55, 144, 138, 0.5);
 }
 
 /* 导航栏 */
@@ -65,12 +52,49 @@ nav a {
   font-weight: bold;
 }
 
+/* header, main, footer */
+header {
+  margin-bottom: 20px;
+}
+
+main {
+  overflow: hidden; /* 清除浮动，确保页面布局正确 */
+}
+
+/* 容器居中限制宽度 */
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+
+
+
+
+
+/* 头像 */
+img {
+  float: right; /* 头像浮动到右侧 */
+  width: 175px;
+  height: 175px;
+  border-radius: 5%;
+  margin-left: 20px; /* 头像与文字之间的间距 */
+}
+
 /* 简历链接布局 */
 .vita-links {
   display: flex;
   justify-content: space-around; /* 或 space-between */
   text-align: center;
 }
+
+
+
+
+
+
 
 /* 卡片式布局（用于 blog preview） */
 .card {
@@ -145,7 +169,7 @@ article h3 {
 
 .tag {
   display: inline-block;
-  background-color: #00bfff;
+  background-color: #37908a;
   color: #fff;
   padding: 0.2rem 0.6rem;
   margin-right: 0.5rem;
@@ -155,7 +179,7 @@ article h3 {
 
 /* 按钮样式 */
 button {
-  background-color: #64B5F6;
+  background-color: #37908a;
   border: none;
   color: #000;
   padding: 0.5rem 1rem;
@@ -164,7 +188,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #42A5F5;
+  background-color: #37908a;
 }
 
 /* 响应式适配 */
