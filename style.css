@@ -96,24 +96,6 @@ img {
 
 
 
-/* 卡片式布局（用于 blog preview） */
-.card {
-  background-color: #1E1E1E;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
-}
-.card:hover {
-  box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
-}
-
-/* 博客界面 */
-.main {
-  flex: 3;
-  padding-right: 2rem;
-}
-
 /* 博客侧边栏 */
 .sidebar {
   background-color: #2b2b2b;
@@ -138,7 +120,7 @@ img {
   display: none;
 }
 
-/* 按钮 */
+/* 任务栏按钮 */
 #toggleSidebar {
   position: fixed;
   top: 50px;
@@ -152,6 +134,7 @@ img {
   margin-bottom: 1rem;
 }
 
+/* 卡片布局 */
 article {
   background-color: #2b2b2b;
   padding: 1rem;
@@ -159,14 +142,25 @@ article {
   border-radius: 0.5rem;
 }
 
-article h3 {
-  margin-top: 0;
+/* blog标题按钮格式 */
+.blog-title a{
+  color: #FFFFFF;
+  font-style: normal;
 }
 
-.tags {
-  margin-top: 0.5rem;
+.blog-title a:hover{
+  color: #37908a;
+  text-decoration: none;
 }
 
+/* blog中标题h3特殊格式 */
+article h3{
+  font-size: 1.3rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+/* tag格式，暂无响应 */
 .tag {
   display: inline-block;
   background-color: #37908a;
@@ -177,26 +171,33 @@ article h3 {
   border-radius: 0.3rem;
 }
 
-/* 按钮样式 */
-button {
-  background-color: #37908a;
-  border: none;
-  color: #000;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #37908a;
+
+
+
+
+
+
+
+/* gallery格式 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem 0rem;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-/* 响应式适配 */
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
-  nav {
-    padding: 1rem;
-  }
+.gallery-grid img {
+  width: 150px;
+  height: 150px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+
