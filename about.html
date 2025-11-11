@@ -1,86 +1,99 @@
+<!--标准文件开头, 通常无需更改-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!--meta是所有html共用的规则-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!--加载google font字体文件-->
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <title>Xu Ling | About</title>
+
+  <!--加载css, 每个页面有公共和非公共的内容 (js在body尾部加载)-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/about.css">
+
+  <!--在browser tab显示, 每个页面需要设置不同的title-->
+  <title>Ling Xu | About</title>
+
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
+  <!--动态背景容器, style.css和background.js-->
+  <canvas id="fractalCanvas"></canvas>
+
+  <!--导航栏, style.css, background.js和darkmode.js-->
+  <nav class="navbar"> 
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div class="nav-button">
+        <button id="theme-toggle">
+            <img src="assets/icon_file/lightmode.png" alt="Toggle theme" class="icon">
+        </button>
+        <button id="background-toggle">
+            <img src="assets/icon_file/fractal open.png" alt="Toggle fractal" class="icon">
+        </button>
+    </div>
   </nav>
 
+  <!--主题内容容器, 便于响应式布局, style.css-->
   <div class="container">
+  
     <header>
 
-      <h1>About Me</h1>
+      <h1>
+        About
+      </h1>
+
+      <!--简要说明-->
+      <!--TODO: 重新撰写简介-->
+      <p> 
+        Here you'll find a bit more about what I enjoy beyond work.
+      </p>
 
     </header>
 
-    <main>
-      <p>Here you'll find a bit more about what I enjoy beyond work.</p>
+    <!--主要内容-->
+  <main>
 
-      <h2>Gallery</h2>
-      <p>under construction</p>
+    <p> 
+      This page is still under construction.
+    </p>
+    <!--旅行主题-->
+    <section class="gallery-section">
+      <h2>Travel</h2>
+      <div id="gallery-travel" class="gallery-grid"></div>
+    </section>
 
-      <div class="gallery-grid">
-        <img src="About_file/2407 (10).JPG" alt="" />
-        <!--<img src="About_file/2407 (9).JPG" alt="" />-->
-        <img src="About_file/2407 (8).JPG" alt="" />
-        <img src="About_file/2407 (7).JPG" alt="" />
-        <!--<img src="About_file/2407 (6).JPG" alt="" />-->
-        <img src="About_file/2407 (5).JPG" alt="" />
-        <!--<img src="About_file/2407 (4).JPG" alt="" />
-        <img src="About_file/2407 (3).JPG" alt="" />
-        <img src="About_file/2407 (2).JPG" alt="" />
-        <img src="About_file/2407 (1).JPG" alt="" />-->
-        <img src="About_file/2406 (4).JPG" alt="" />
-        <!--<img src="About_file/2406 (3).JPG" alt="" />
-        <img src="About_file/2406 (2).JPG" alt="" />-->
-        <img src="About_file/2406 (1).JPG" alt="" />
-        <!--<img src="About_file/2405 (6).JPG" alt="" />-->
-        <img src="About_file/2405 (5).JPG" alt="" />
-        <img src="About_file/2405 (4).JPG" alt="" />
-        <img src="About_file/2405 (3).JPG" alt="" />
-        <img src="About_file/2405 (2).JPG" alt="" />
-        <img src="About_file/2405 (1).JPG" alt="" />
-        <img src="About_file/2404 (7).JPG" alt="" />
-        <img src="About_file/2404 (6).JPG" alt="" />
-        <img src="About_file/2404 (5).JPG" alt="" />
-        <img src="About_file/2404 (4).JPG" alt="" />
-        <img src="About_file/2404 (3).JPG" alt="" />
-        <img src="About_file/2404 (2).JPG" alt="" />
-        <img src="About_file/2404 (1).JPG" alt="" />
-      </div>
+    <!--观鸟主题-->
+    <section class="gallery-section">
+      <h2>Birding</h2>
+      <div id="gallery-birding" class="gallery-grid"></div>
+    </section>
 
-      <!--<h2>Another Gallery</h2>
-      <div class="gallery-grid">
-        <img src="About_file/001.jpg" alt="" />
-        <img src="About_file/002.jpeg" alt="" />
-        <img src="About_file/003.jpg" alt="" />
-        <img src="About_file/004.jpg" alt="" />-->
+  </main>
 
-      </div>
-      
-    </main>
-
-    <footer> <!--脚注-->
-      
-      <span style="display: block; text-align: center; font-size: 0.85rem; color: rgba(204, 204, 204, 0.5); margin-top: 2em;">
-        &copy; 2025 Xu Ling. All rights reserved. &nbsp; This site is still under construction.
-      </span>
-
+    <!--脚注-->
+    <footer class="site-footer">
+        &copy; 2025 Xu Ling. All rights reserved. 
     </footer>
 
   </div>
+
+  <!--脚本-->
+  <script src="js/darkmode.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/gallery_travel.js"></script>
+  <script src="js/gallery_birding.js"></script>
+
+
 </body>
-
-
-
 </html>

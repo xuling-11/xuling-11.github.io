@@ -1,35 +1,69 @@
+<!--标准文件开头, 通常无需更改-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <title>Xu Ling | Homepage</title> <!--Browser tab显示-->
+  <!--meta是所有html共用的规则-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--加载google font字体文件-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <!--加载css, 每个页面有公共和非公共的内容 (js在body尾部加载)-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/index.css">
+  
+  <!--在browser tab显示, 每个页面需要设置不同的title-->
+  <title>Ling Xu | Homepage</title>
+
 </head>
 
 <body>
+  <!--动态背景容器, style.css和background.js-->
+  <canvas id="fractalCanvas"></canvas>
 
-  <nav> <!--导航栏-->
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
+  <!--导航栏, style.css, background.js和darkmode.js-->
+  <nav class="navbar"> 
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div class="nav-button">
+        <button id="theme-toggle">
+            <img src="assets/icon_file/lightmode.png" alt="Toggle theme" class="icon">
+        </button>
+        <button id="background-toggle">
+            <img src="assets/icon_file/fractal open.png" alt="Toggle fractal" class="icon">
+        </button>
+    </div>
   </nav>
 
+  <!--主题内容容器, 便于响应式布局, style.css-->
   <div class="container">
-    <!-- 头像-->
-    <img src="Index_file/Portrait.jpg" alt="Protrait">
 
+    <!--头像, index.css-->
+    <a href="" title="Created by twitter @extraA_nocpno from https://picrew.me/en/image_maker/188948">
+        <img src="assets/index_file/Portrait.jpg" class="portrait" alt="Protrait" />
+    </a>
+    
+
+    <!--基本信息, style.css-->
     <header>
 
-      <h1> <!--姓名-->
+      <!--姓名, index.css-->
+      <h1>
         Xu Ling &nbsp;
-        <span style="font-family: '楷体', sans-serif; font-weight: lighter; font-size: 0.8em;">徐 菱</span> &nbsp;
-        <span style="font-family: '楷体', sans-serif; font-weight: 10; font-size: 0.7em; color: #CCCCCC;">[ɕy liŋ]</span>   
+        <span class="name-cn">徐&thinsp;菱</span> &nbsp;
+        <span class="name-pinyin">[ɕy&thinsp;liŋ]</span>   
       </h1>
 
-      <p> <!--邮箱-->
+      <!--邮箱, 非标准格式直接定义在html里-->
+      <p> 
         <a href="mailto:mia.xuling@gmail.com">
           <span style="font-family: 'Montserrat', sans-serif;">mia dot xuling at gmail dot com</span>
         </a>
@@ -43,13 +77,15 @@
 
     </header>
 
+    <!--主要内容, style.css, index.css-->
     <main>
 
-      <p> <!--自我介绍-->
-        Hey! I'm Ling, a first-year Master's student 
+      <!--自我介绍, 注意及时更新-->  
+      <p>
+        Hey! I'm Ling, a second-year post-graduate student 
         in <strong>Pure Mathematics</strong> 
         at <a href="http://en.math.nankai.edu.cn/">Nankai University</a>, 
-        under the supervision of <a href="https://my.nankai.edu.cn/sms/yx_en/list.htm">Xiao Yao</a>,
+        under the supervision of <a href="https://mathscinet.ams.org/mathscinet/author?authorId=1073727">Xiao Yao</a>,
         with an expected graduation in June 2027. 
         My current research interest lies in <strong>complex dynamics</strong>.
       </p>
@@ -61,27 +97,32 @@
       <p>  
         I received my undergraduate degree in <strong>Finance</strong> 
         from <a href="https://sof.sufe.edu.cn/main.htm">Shanghai University of Finance and Economics</a>,  
-        where I focused on <strong>Quantitative Finance</strong>. 
+        where I was admitted into an elite honors program and focused on <strong>Quantitative Finance</strong>. 
         I also spent a semester at 
         <a href="https://www.berkeley.edu/"> UC Berkeley</a> as a visiting student, 
-        which laid the groundwork for my interdisciplinary interests.      
+        because I wanted to challenge myself in a different academic environment and gain a broader perspective on my field.   
       </p>
 
       <p>
-        My life philosophy is to gain a deeper understanding of the world. You can find my recent work on <a href="blog.html">Blog</a> and explore the <a href="about.html">About</a> section to find some fun stuff. Feel free to get in touch if you are interested.
+        My life philosophy is to seek wisdom and insight into the world. 
+        You can find my formal works on <a href="project.html">Project</a> and recent reflections on <a href="blog.html">Blog</a>.
+        Feel free to get in touch if you are interested.
       </p>
       
-      <h2> <!--简历-->
-        Brief Vita
+      <!--简历, 注意及时更新-->
+      <!--TODO: 修改简历, 希望是中英文简历+英文纯数简历-->
+      <h2>
+        Curriculum Vitae
       </h2>
 
       <div class="vita-links">
-        <a href="Index_file/2505-Vita-CN.pdf" target="_blank">Latest Version (CN)</a>
-        <a href="Index_file/2207-Vita-CN.pdf" target="_blank">Earlier Version (CN)</a>
-        <a href="Index_file/2207-Vita-EN.pdf" target="_blank">Earlier Version (EN)</a>
+        <a href="assets/index_file/2511-vita-en.pdf" target="_blank">General (EN)</a>
+        <a href="assets/index_file/2511-vita-cn.pdf" target="_blank">General (CN)</a>
+        <a href="assets/index_file/2511-vita-math.pdf" target="_blank">Mathematics (EN)</a>
       </div>
 
-      <h2> <!--教育, 待补充-->
+      <!--教育经历-->
+      <h2> 
         Education
       </h2>
 
@@ -108,21 +149,39 @@
         </li>
       </ul>
 
-      <p> <!--待使用区域
-        This place is left for site visitors. -->
-      </p>
+
+      <!--访问计数器和地图展示, 直接包含js, index.css-->
+      <!--TODO: 上线后才能测试counter是否正常运行-->
+      <div class="counter">
+        Pageviews: 
+        <span id="visit-count">Loading...</span>
+      </div>
+
+      <script>
+        fetch('https://api.countapi.xyz/hit/xuling-11.github.io/visits')
+        .then(res => res.json())
+        .then(res => {
+            document.getElementById('visit-count').textContent = res.value;
+        });
+      </script>
+
+      <a href="https://mapmyvisitors.com/web/1c0hr" title="Visit tracker">
+        <img src="https://mapmyvisitors.com/map.png?cl=a3a3a3&w=590&t=n&d=2iCYpNE_RMCmxm2wGsvaXmcpCvZlIefPPcJZBnSnixI&co=f1f1f1&ct=0a0a0a" class="visitor-map" alt="Visitor map" />
+      </a>
+
+
     </main>
 
-    <footer> <!--脚注-->
-      
-      <span style="display: block; text-align: center; font-size: 0.85rem; color: rgba(204, 204, 204, 0.5); margin-top: 2em;">
-        &copy; 2025 Xu Ling. All rights reserved. &nbsp; This site is still under construction.
-      </span>
-
+    <!--脚注, 只有index的需要更新update时间, style.css-->
+    <footer class="site-footer">
+        &copy; 2025 Xu Ling. All rights reserved. &nbsp; This site is still under construction, updated Nov 2025.
     </footer>
 
   </div>
 
-</body>
+  <!--脚本-->
+  <script src="js/darkmode.js"></script>
+  <script src="js/background.js"></script>
 
+</body>
 </html>

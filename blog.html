@@ -1,195 +1,93 @@
+<!--标准文件开头, 通常无需更改-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!--meta是所有html共用的规则-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!--加载google font字体文件-->
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <title>Xu Ling | Blog</title>
+
+  <!--加载css, 每个页面有公共和非公共的内容 (js在body尾部加载)-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/blog.css">
+
+  <!--在browser tab显示, 每个页面需要设置不同的title-->
+  <title>Ling Xu | Blog</title>
+
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
+  <!--动态背景容器, style.css和background.js-->
+  <canvas id="fractalCanvas"></canvas>
+
+  <!--导航栏, style.css, background.js和darkmode.js-->
+  <nav class="navbar"> 
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div class="nav-button">
+        <button id="theme-toggle">
+            <img src="assets/icon_file/lightmode.png" alt="Toggle theme" class="icon">
+        </button>
+        <button id="background-toggle">
+            <img src="assets/icon_file/fractal open.png" alt="Toggle fractal" class="icon">
+        </button>
+    </div>
   </nav>
 
-  <button id="toggleSidebar">☰</button> <!--侧边栏折叠按钮-->
-            
-  <aside class="sidebar collapsed"> <!-- 侧边栏 -->
-    
-    <div class="sidebar-content">
-
-      <h3>Category</h3>
-      <p> not available yet</p>
-      <ul>
-        <li><a href="blog.html">Finance</a></li>
-        <li><a href="blog.html">Math</a></li>
-        <li><a href="blog.html">Others</a></li>
-      </ul>
-
-      <h3>Tag</h3>
-      <p> not available yet</p>
-      <div class="tags">
-        <span class="tag">Project</span>
-        <span class="tag">Note</span>
-        <br>
-        <span class="tag">中文</span>
-        <span class="tag">English</span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- 控制折叠的脚本 -->
-  <script> 
-    const toggleBtn = document.getElementById('toggleSidebar');
-    const sidebar = document.querySelector('.sidebar');
-
-    toggleBtn.addEventListener('click', function() {
-      sidebar.classList.toggle('collapsed');
-    });
-  </script>
-
+  <!--主题内容容器, 便于响应式布局, style.css-->
   <div class="container">
-
+  
     <header>
 
-      <h1>Blog</h1>
+      <h1>
+        Blog
+      </h1>
+
+      <!--简要说明-->
+      <!--TODO: 重新撰写简介-->
+      <p> 
+        Here are my blogs. You can use tag to select.
+      </p>
 
     </header>
 
+    <!--主要内容-->
     <main>
-
-      <!--模板
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2210-Exxon Mobil Corporation In-Depth Valuation Report.pdf" target="_blank">
-            Topic
-          </a>
-        </h3>
-
-        <p><em>March, 2025</em></p>
-
-        <p>Abstract</p>
-
-        <span class="tag">Note</span>
-        <span class="tag">English</span>
-      </article>
-      -->
       
-      <!--PDF预览窗口
-      <iframe src="Project_example.pdf" width="100%" height="600px"></iframe>
-      -->
-    
+    <p> 
+      This page is still under construction.
+    </p>
+        <!--放置筛选用的标签-->
+        <div id="filters">
+            <div id="lang-filter"></div>
+            <div id="cat-filter"></div>
+        </div>
 
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2412-Branden-Krasikov-Shapiro Type Theorem for Linear Difference Operator.pdf" target="_blank">
-            Branden-Krasikov-Shapiro Type Theorem for Linear Difference Operator
-          </a>
-        </h3>
-
-        <p><em>December, 2024</em></p>
-
-        <p>
-          In this paper, we give a complete characterisation of the entire function <i>f</i> which both <i>f</i> and its general linear difference <i>Lf</i> omit zero. It can be seen as a difference version of the Frank-Hellerstein theorem, which can be regarded as a dual version of (localized) Hermite-Poulain theorem in some sense. With this characterisation in hand, we establish a version of Brändén-Krasikov-Shapiro theorem for linear difference operator preserving <i>ΠE(∅)</i>. Our method can be extended partially to a meromorphic function with finitely many zeros and poles.
-          <br>
-          In collaboration with <a href="mailto:yaoxiao@nankai.edu.cn">Xiao Yao</a> and <a href="mailto:yitm_zhang@163.com">Yiming Zhang</a>.
-        </p>
-
-        <span class="tag">Project</span>
-        <span class="tag">English</span>
-      </article>
-
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2404-A股市场收益率波动的长记忆性.pdf" target="_blank">
-            Long Memory in Stock Return Volatility in Chinese Stock Market
-          </a>
-        </h3>
-
-        <p><em>April, 2024</em></p>
-
-        <p>
-          Graduation thesis, under the supervision of Professor <a href="https://sof.sufe.edu.cn/80/4a/c6894a98378/page.htm">Mingtao Wang</a>.<br>
-          This paper investigates long memory in the volatility of daily squared returns for Chinese stocks using GPH estimation. 
-          Rolling estimation reveals that 98.92% of stocks show significant long memory. 
-          A cross-sectional analysis finds a negative correlation between long memory and future excess returns, suggesting that higher volatility predictability leads to lower risk premiums. 
-          The findings are robust across industry sectors.
-        </p>
-
-        <span class="tag">Project</span>
-        <span class="tag">中文</span>
-      </article>
-
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2212-公共物品实验中的合作行为与促进机制.pdf" target="_blank">
-            公共物品实验中的合作行为与促进机制
-          </a>
-        </h3>
-
-        <p><em>December, 2022</em></p>
-
-        <p>
-          Fianl paper for <i>Experimental Economics</i>.<br>
-          This article reviews the research history of public goods experiments and public goods games, the reasons behind the emergence of cooperation, and various mechanisms that promote cooperation.
-        </p>
-
-        <span class="tag">Note</span>
-        <span class="tag">中文</span>
-      </article>      
-
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2212-对冲基金投资策略及风险模型.pdf" target="_blank">
-            对冲基金投资策略及风险模型
-          </a>
-        </h3>
-
-        <p><em>December, 2022</em></p>
-
-        <p>
-          Final paper for <i>Investment Banking</i>.<br>
-          This article provides a very brief introduction to hedge funds, including investment strategies, risk models and inherent issues.        
-        </p>
-
-        <span class="tag">Note</span>
-        <span class="tag">中文</span>
-      </article>
-
-      <article>
-        <h3 class="blog-title">
-          <a href="Blog_file/2210-Exxon Mobil Corporation In-Depth Valuation Report.pdf" target="_blank">
-            In-depth Valuation Report on ExxonMobil
-          </a>
-        </h3>
-
-        <p><em>October, 2022</em></p>
-
-        <p>
-          Valuation report for the 4th global S&P Corporate Valuation Challenge.<br>
-          In collaboration with 华辰东, 罗小铭, 马晨皓, 张心怡.
-        </p>
-
-        <span class="tag">Project</span>
-        <span class="tag">English</span>
-      </article>
+        <!--放置博客列表-->
+        <div id="blog-container"></div>
 
     </main>
 
-    <footer> <!--脚注-->
-      
-      <span style="display: block; text-align: center; font-size: 0.85rem; color: rgba(204, 204, 204, 0.5); margin-top: 2em;">
-        &copy; 2025 Xu Ling. All rights reserved. &nbsp; This site is still under construction.
-      </span>
-
+    <!--脚注-->
+    <footer class="site-footer">
+        &copy; 2025 Xu Ling. All rights reserved.
     </footer>
 
   </div>
-    
-</body>
 
+  <!--脚本-->
+  <script src="js/darkmode.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/blog.js"></script>
+
+</body>
 </html>

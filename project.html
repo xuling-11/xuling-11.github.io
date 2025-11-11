@@ -1,0 +1,208 @@
+<!--标准文件开头, 通常无需更改-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--meta是所有html共用的规则-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--加载google font字体文件-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <!--加载css, 每个页面有公共和非公共的内容 (js在body尾部加载)-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/project.css">
+  
+  <!--在browser tab显示, 每个页面需要设置不同的title-->
+  <title>Ling Xu | Project</title>
+
+</head>
+
+<body>
+  <!--动态背景容器, style.css和background.js-->
+  <canvas id="fractalCanvas"></canvas>
+
+  <!--导航栏, style.css, background.js和darkmode.js-->
+  <nav class="navbar"> 
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </div>
+    
+    <div class="nav-button">
+        <button id="theme-toggle">
+            <img src="assets/icon_file/lightmode.png" alt="Toggle theme" class="icon">
+        </button>
+        <button id="background-toggle">
+            <img src="assets/icon_file/fractal open.png" alt="Toggle fractal" class="icon">
+        </button>
+    </div>
+  </nav>
+
+  <!--主题内容容器, 便于响应式布局, style.css-->
+  <div class="container">
+
+    <!--标题等内容-->
+    <header>
+
+      <!--标题-->
+      <h1>
+        Project
+      </h1>
+
+      <!--简要说明-->
+      <!--TODO: 重新撰写简介-->
+      <p> 
+        <!--Here are my projects.-->
+      </p>
+
+    </header>
+
+    <!--主要内容, style.css, index.css-->
+    <main>
+
+      <!--Papers, 注意及时更新-->  
+      <!--TODO: 修改abstract, 在投的文章没有链接-->
+
+      <!--模板
+      <article>
+        <h3">
+          <a href="file_link.pdf" target="_blank">
+            Topic
+          </a>
+        </h3>
+
+        <p><em>Date</em></p>
+
+        <p>Abstract</p>
+
+        <span class="tag">Math</span>
+        <span class="tag">English</span>
+      </article>
+      -->
+      
+      <!--PDF预览窗口
+      <iframe src="Project_example.pdf" width="100%" height="600px"></iframe>
+      -->
+
+      <article>
+        <h3>
+          <a href=" " target="_blank">
+            A Generating Algorithm for the Escaping Parameter Sets of the Exponential and Cosine Families and Its Accuracy
+          </a>
+        </h3>
+
+        <p><em>September, 2025</em></p>
+        
+        <p>This paper is currently under review, so is not available here.</p>
+
+        <p> 
+          We present a plotting algorithm for the escaping parameter sets of the exponential family and cosine family. 
+          We prove that the generated images are correct on any given closed square region in the arameter plane, except for a few pixels. 
+          The same is true for the Julia set of exponential family, using the modified algorithm. 
+          Such algorithms possess greater advantages and generality in analyzing the correctness and accuracy of the generated images.
+        </p>
+
+        <p>
+          This work is in collaboration with <a href="mailto: xjhuang14@fudan.edu.cn">Xiaojie Huang</a> and <a href="mailto:liyuntong2005@sohu.com">Yuntong Li</a>.
+        </p>
+
+        <span class="project_tag">Pure Math</span>
+        <span class="project_tag">English</span>
+      </article>
+
+      <article>
+        <h3>
+          <a href=" " target="_blank">
+            Branden-Krasikov-Shapiro Type Theorem for Linear Difference Operator
+          </a>
+        </h3>
+
+        <p><em>December, 2024</em></p>
+
+        <p>This paper is currently under review, so is not available here.</p>
+
+        <p>
+          We give a complete characterisation of the entire function <i>f</i> which both <i>f</i> and its general linear difference <i>Lf</i> omit zero. 
+          It can be seen as a difference version of the Frank-Hellerstein theorem, which can be regarded as a dual version of (localized) Hermite-Poulain theorem in some sense. 
+          With this characterisation in hand, we establish a version of Brändén-Krasikov-Shapiro theorem for linear difference operator preserving <i>ΠE(∅)</i>. 
+          Our method can be extended partially to a meromorphic function with finitely many zeros and poles.
+        </p>
+
+        <p>
+          In collaboration with <a href="mailto:yaoxiao@nankai.edu.cn">Xiao Yao</a> and <a href="mailto:yitm_zhang@163.com">Yiming Zhang</a>.
+        </p>
+
+        <span class="project_tag">Pure Math</span>
+        <span class="project_tag">English</span>
+      </article>
+
+      <article>
+        <h3>
+          <a href="assets/project_file/2404-A股市场收益率波动的长记忆性.pdf" target="_blank">
+            Long Memory in Stock Return Volatility in Chinese Stock Market
+          </a>
+        </h3>
+
+        <p><em>April, 2024</em></p>
+
+        <p>
+          This is my undergraduation thesis, under the supervision of Professor <a href="https://sof.sufe.edu.cn/80/4a/c6894a98378/page.htm">Mingtao Wang</a>.
+        </p>
+
+        <p>
+          This paper investigates long memory in the volatility of daily squared returns for Chinese stocks using GPH estimation. 
+          Rolling estimation reveals that 98.92% of stocks show significant long memory. 
+          A cross-sectional analysis finds a negative correlation between long memory and future excess returns, suggesting that higher volatility predictability leads to lower risk premiums. 
+          The findings are robust across industry sectors.
+        </p>
+        
+        <p>
+          All analyses presented in this paper are implemented through self-developed Python scripts.
+        </p>
+
+        <span class="project_tag">Finance</span>
+        <span class="project_tag">中文</span>
+      </article>
+
+      <article>
+        <h3>
+          <a href="assets/project_file/2210-Exxon Mobil Corporation In-Depth Valuation Report.pdf" target="_blank">
+            In-depth Valuation Report on ExxonMobil
+          </a>
+        </h3>
+
+        <p><em>October, 2022</em></p>
+
+        <p>
+          This is a valuation report for the 4th global S&P Corporate Valuation Challenge.
+          This report was awarded as Top Ten nationwide.
+        </p>
+
+        <p>
+          In collaboration with Chendong Hua, Chenhao Ma, Xiaomin Luo and Xinyi Zhang (alphabetical order). 
+        </p>
+
+        <span class="project_tag">Finance</span>
+        <span class="project_tag">English</span>
+      </article>
+
+    </main>
+
+    <!--脚注-->
+    <footer class="site-footer">
+        &copy; 2025 Xu Ling. All rights reserved.
+    </footer>
+
+  </div>
+
+  <!--脚本-->
+  <script src="js/darkmode.js"></script>
+  <script src="js/background.js"></script>
+
+</body>
+</html>
