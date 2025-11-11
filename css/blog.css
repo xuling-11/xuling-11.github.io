@@ -1,0 +1,109 @@
+/* tag筛选器的格式, 底部与正文加入空间 */
+#filters {
+  margin-bottom: 1rem;
+}
+
+/* 每一行筛选的总结构 */
+.filter-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+/* 标题的格式 */
+.filter-label {
+  font-weight: bold;
+  margin-right: 1rem;
+  color: var(--color-text);
+}
+
+/* 每个筛选按钮, 重复定义一次 */
+.lang-btn {
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  height: 32px;
+
+  background: var(--color-primary);
+  color: #ffffff;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+  transform: scale(1.05);
+}
+
+.lang-btn.active {
+  background-color: var(--color-primary-dark);
+}
+
+.cat-btn {
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  height: 32px;
+
+  background: var(--color-primary);
+  color: #ffffff;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.cat-btn:hover {
+  transform: scale(1.05);
+}
+
+.cat-btn.active {
+  background-color: var(--color-primary-dark);
+}
+
+
+
+
+
+
+
+
+
+
+/* 增加blog间的段间距 */
+.blog-entry {
+  margin: 0.6rem 0;
+}
+
+/* 日期的格式 */
+.meta {
+  color: var(--color-text);
+  margin-left: 0.5rem;
+}
+
+/* tag的格式 */
+.tags {
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* 年份, 主要是艺术字效果 */
+.year-divider {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--color-text-muted);
+  /* border-bottom: 2px dashed var(--color-text-muted); */
+}
+
+.blog-title {
+    font-weight: bold;
+}

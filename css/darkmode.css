@@ -1,0 +1,27 @@
+/* 暗色模式全局配色 */
+[data-theme="dark"] {
+  --color-bg: #121212;          /* 背景, 深灰 */
+  --color-bg-light: #1d1d1dee;    /* 背景偏浅, 不透明 */
+  --color-bg-muted: #3b3b3b80;    /* 背景偏浅, 透明 */
+
+  --color-text: #CCCCCC;        /* 文字, 浅灰 */
+  --color-text-bold: #FFFFFF;  /* 强调文字, 纯白 */
+  --color-text-muted: #CCCCCC80;  /* 备注文字, 中灰 */
+
+  --color-primary: #37908a;     /* 青绿主色 */
+  --color-primary-light: #33d6bf;   /* 青绿偏亮 */
+  --color-primary-dark: #1c4e4a;    /* 青绿偏暗 */
+  
+  --color-error: #ff4d4d;   /* 报错 */
+  --color-warning: #f0c93d; /* 警告 */
+}
+
+/* 访客地图反色 */
+[data-theme="dark"] .visitor-map {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* 按钮图标反色, brightness可以改为0.9 */
+[data-theme="dark"] .icon {
+  filter: invert(1) brightness(1);
+}

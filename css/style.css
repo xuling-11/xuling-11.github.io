@@ -1,0 +1,141 @@
+/* 全局配色 */
+:root {
+  --color-bg: #f1f1f1;          /* 背景, 浅灰 */
+  --color-bg-light: #d6d6d6ee;    /* 背景偏深 */
+  --color-bg-muted: #d6d6d680;    /* 背景偏浅, 透明 */
+
+  --color-text: #2b2b2b;        /* 文字, 深灰 */
+  --color-text-bold: #0a0a0a;  /* 强调文字, 纯黑 */
+  --color-text-muted: #2b2b2b80;  /* 备注文字, 中灰 */
+
+  --color-primary: #37908a;     /* 青绿主色 */
+  --color-primary-light: #33d6bf;   /* 青绿偏亮 */
+  --color-primary-dark: #1c4e4a;    /* 青绿偏暗 */
+  
+  --color-error: #ff4d4d;   /* 报错 */
+  --color-warning: #f0c93d; /* 警告 */
+}
+
+/* 全局格式, 背景颜色, 默认字体颜色 */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* 强调字体 */
+strong {
+  color: var(--color-text-bold); 
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text-bold);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* header, main */
+header {
+  margin-bottom: 20px;
+}
+
+main {
+  overflow: hidden; /* 清除浮动，确保页面布局正确 */
+}
+
+/* 容器居中限制宽度 */
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* footer */
+.site-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 2em;
+}
+
+
+
+
+/* 链接样式 */
+a {
+  color: var(--color-primary);
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+
+/* 导航栏 */
+.navbar {
+  display: flex; /* 控制导航栏里的元素 */
+  justify-content: space-between; /* 两端对齐：左边一组、右边一组 */
+  align-items: center;           /* 垂直居中对齐 */
+  background-color: var(--color-bg-light);
+  padding: 1rem 2rem;
+  position: sticky; /* 控制整个导航栏的位置 */
+  top: 0;
+  z-index: 1000;
+}
+
+/* 页面导航 */
+.nav-links a {
+  margin-right: 1.5rem;
+  color: var(--color-text);
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* 切换按钮 */
+/* TODO: 这两个按钮可以换成矢量图标 */
+.nav-button {
+  display: flex;
+  align-items: center; /* 让里面的 button 垂直居中 */
+}
+
+.nav-button button{
+  border: none;
+  margin-left: 1.5rem;
+  background: var(--color-bg-light);
+  cursor: pointer;
+}
+
+.nav-button button:hover{
+  background: var(--color-bg-light);
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+
+
+
+/* 动态背景 */
+#fractalCanvas {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}

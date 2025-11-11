@@ -1,0 +1,23 @@
+/* 卡片布局 */
+article {
+  background-color: var(--color-bg-muted);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* blog中标题h3特殊格式 */
+article h3{
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.project_tag {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
