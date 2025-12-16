@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/about.css">
 
   <!--在browser tab显示, 每个页面需要设置不同的title-->
-  <title>Ling Xu | About</title>
+  <title>Ling Xu | About(3D Printing)</title>
 
 </head>
 
@@ -27,10 +27,7 @@
   <!--导航栏, style.css, background.js和darkmode.js-->
   <nav class="navbar"> 
     <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="project.html">Project</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
+        <a href="about.html">Back</a>
     </div>
     
     <div class="nav-button">
@@ -43,63 +40,33 @@
     </div>
   </nav>
 
+
   <!--主题内容容器, 便于响应式布局, style.css-->
   <div class="container">
   
     <header>
-
       <h1>
-        About
+        3D Printing
       </h1>
-
-      <!--简要说明-->
-      <p> 
-        Here you'll find a bit more about what I enjoy beyond work.
-      </p>
-
     </header>
 
-    <!--主要内容-->
-    <main data-page="about">
-
-      <section class="gallery-section">
-        <h2>
-          Travel         
-        </h2>
-        <div class="gallery" id="travel-gallery"></div>
-      </section>
-
-      <section class="gallery-section">
-        <h2>
-          3D Printing
-        </h2>
-        <div class="gallery" id="printing-gallery"></div>
-      </section>
-
-      <h2>
-        Others
-      </h2>
-
-      <p>
-        I have volunteered as a Chinese translator for <a href="https://www.youtube.com/c/3Blue1Brown">3B1B</a> videos. <br>
-        I also enjoy playing soccer and guzheng (a traditional Chinese instrument).
-      </p>
-
+    <main data-page="about-printing">
+        <div class="gallery2" id="printing-gallery"></div>
+        <div class="lightbox" id="lightbox">
+            <img id="lightbox-img" alt="">
+        </div>
     </main>
 
-    <!--脚注-->
     <footer class="site-footer">
         &copy; 2025 Xu Ling. All rights reserved. 
     </footer>
 
   </div>
 
-  <!--脚本-->
+
   <script src="js/darkmode.js"></script>
   <script src="js/background.js"></script>
   <script src="js/about.js"></script>
-
-
 
 </body>
 </html>
