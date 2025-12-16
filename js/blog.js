@@ -4,44 +4,124 @@ const catFilter = document.getElementById("cat-filter");
 
 const data = [
   {
-    title: "Branden-Krasikov-Shapiro Type Theorem for Linear Difference Operator",
-    file: "Blog_file/2412-Branden-Krasikov-Shapiro.pdf",
-    pages: 14,
-    date: "2024-12-05",
+    title: "读书笔记: 简明复分析",
+    file: "Blog_file/2505-《简明复分析》读书笔记.pdf",
+    pages: 18,
+    date: "2025-05-28",
+    language: "中文",
+    category: "Mathematics"
+  },
+  {
+    title: "实分析与复分析笔记",
+    file: "Blog_file/2506-实复分析笔记.pdf",
+    pages: 12,
+    date: "2025-06-16",
+    language: "中文",
+    category: "Mathematics"
+  },
+  {
+    title: "Notes on Fornaess's Lecture Notes",
+    file: "assets/blog_file/2503-Fornaess讲义笔记.pdf",
+    pages: 13,
+    date: "2025-03-18",
     language: "English",
-    category: "analysis"
+    category: "Mathematics"
   },
   {
-    title: "复动力系统讲义笔记",
-    file: "Blog_file/2501-Complex-Dynamics-Notes.pdf",
-    pages: 32,
-    date: "2025-01-10",
-    language: "中文",
-    category: "complex dynamics"
+    title: "Summer School of Dynamical Systems",
+    file: "assets/blog_file/2507-Summer School of Dynamical Systems.pdf",
+    pages: 31,
+    date: "2025-07-13",
+    language: "English",
+    category: "Mathematics"
   },
   {
-    title: "复动力系统讲义笔记",
-    file: "Blog_file/2501-Complex-Dynamics-Notes.pdf",
-    pages: 32,
-    date: "2025-01-10",
-    language: "中文",
-    category: "complex dynamics"
+    title: "Case Competition",
+    file: "assets/blog_file/2303-Nexus Case Comp Deck.pdf",
+    pages: 11,
+    date: "2023-03-18",
+    language: "English",
+    category: "Finance"
   },
   {
-    title: "复动力系统讲义笔记",
-    file: "Blog_file/2501-Complex-Dynamics-Notes.pdf",
-    pages: 32,
-    date: "2025-01-10",
-    language: "中文",
-    category: "complex dynamics"
-  },
+    title: "Coursework: Stochastic Progress",
+    file: "assets/blog_file/2206-Stochastic Process Final Project.pdf",
+    pages: 11,
+    date: "2022-06-21",
+    language: "English",
+    category: "Finance"
+  },    
   {
-    title: "对冲基金投资策略及风险模型",
+    title: "课程论文: 对冲基金投资策略",
     file: "assets/blog_file/2212-对冲基金投资策略及风险模型.pdf",
-    pages: 21,
-    date: "2022-12-10",
+    pages: 8,
+    date: "2022-12-29",
     language: "中文",
     category: "Finance"
+  },    
+  {
+    title: "课程论文: 公共物品实验",
+    file: "assets/blog_file/2212-公共物品实验中的合作行为与促进机制.pdf",
+    pages: 6,
+    date: "2022-12-25",
+    language: "中文",
+    category: "Finance"
+  },    
+  {
+    title: "课程论文: Ising模型",
+    file: "assets/blog_file/2212-伊辛模型及其在物理与经济学中的应用.pdf",
+    pages: 9,
+    date: "2022-12-19",
+    language: "中文",
+    category: "Mathematics"
+  },  
+  {
+    title: "数模国赛论文: 无人机定位",
+    file: "assets/blog_file/2209-基于模糊匹配的无人机纯方位无源定位模型.pdf",
+    pages: 17,
+    date: "2022-09-18",
+    language: "中文",
+    category: "Modeling"
+  },  
+  {
+    title: "天池学习赛: 贷款违规预测",
+    file: "assets/blog_file/2208-天池学习赛贷款违约预测.pdf",
+    pages: 1,
+    date: "2022-08-24",
+    language: "中文",
+    category: "Coding"
+  },  
+  {
+    title: "读书笔记: 资本市场的混沌与秩序",
+    file: "assets/blog_file/2207-《资本市场的混沌与秩序》读书笔记.pdf",
+    pages: 1,
+    date: "2022-07-27",
+    language: "中文",
+    category: "Finance"
+  },
+  {
+    title: "读书笔记: 数学模型",
+    file: "assets/blog_file/2206-《数学模型》读书笔记.pdf",
+    pages: 26,
+    date: "2022-06-17",
+    language: "中文",
+    category: "Modeling"
+  },
+  {
+    title: "数模校赛论文: 污染物模型",
+    file: "assets/blog_file/2204-基于微分方程模型的不同城市室内污染物解决方案.pdf",
+    pages: 13,
+    date: "2022-04-15",
+    language: "中文",
+    category: "Modeling"
+  },
+  {
+    title: "数模国赛论文: 反射面形状调节",
+    file: "assets/blog_file/2109-FAST 主动反射面形状调节的机理建模与拟合设计.pdf",
+    pages: 24,
+    date: "2021-09-12",
+    language: "中文",
+    category: "Modeling"
   }
 ];
 

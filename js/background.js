@@ -5,7 +5,7 @@ const bg_icon = bg_toggleButton.querySelector("img"); // 获取按钮里的图�
 
 let t = 0;
 let animationId = null;
-let backgroundEnabled = true; // 背景是否启用
+let backgroundEnabled = localStorage.getItem("backgroundEnabled") !== "false"; // 背景是否启用
 
 
 // 此处0.7*size可以改变画框大小
@@ -60,23 +60,23 @@ function draw() {
 
 // 启动背景
 function startBackground() {
-  if (!backgroundEnabled) {
-    backgroundEnabled = true;
-    canvas.style.display = "block";
-    draw();
-    bg_icon.src = "assets/icon_file/fractal open.png"; // 切换为“开启”图标
-  }
+  backgroundEnabled = true;
+  localStorage.setItem("backgroundEnabled", "true");
+
+  canvas.style.display = "block";
+  bg_icon.src = "assets/icon_file/fractal open.png";
+  draw();
 }
 
 // 停止背景
 function stopBackground() {
-  if (backgroundEnabled) {
-    backgroundEnabled = false;
-    cancelAnimationFrame(animationId);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    canvas.style.display = "none";
-    bg_icon.src = "assets/icon_file/fractal close.png"; // 切换为“关闭”图标
-  }
+  backgroundEnabled = false;
+  localStorage.setItem("backgroundEnabled", "false");
+
+  cancelAnimationFrame(animationId);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.style.display = "none";
+  bg_icon.src = "assets/icon_file/fractal close.png";
 }
 
 // 按钮事件监听
@@ -89,4 +89,11 @@ bg_toggleButton.addEventListener("click", () => {
 });
 
 
-draw();
+if (backgroundEnabled) {
+  canvas.style.display = "block";
+  bg_icon.src = "assets/icon_file/fractal open.png";
+  draw();
+} else {
+  canvas.style.display = "none";
+  bg_icon.src = "assets/icon_file/fractal close.png";
+}
