@@ -11,10 +11,9 @@ const imageData = {
   printing: {
     base: "assets/about_file/printing/",
     files: [
-      "1.png", 
-      "2.png", 
-      "3.png", 
-      "4.png"]
+      "24 (1).jpg", "24 (2).jpg", "24 (3).jpg", "24 (4).jpg", "24 (5).jpg", "24 (6).jpg", "24 (7).jpg", "24 (8).jpg", "24 (9).jpg", "24 (10).jpg", "24 (11).jpg", "24 (12).jpg", "24 (13).jpg", "24 (14).jpg", "24 (15).jpg", "24 (16).jpg", "24 (17).jpg", "24 (18).jpg", "24 (19).jpg", "24 (20).jpg", 
+      "25 (1).jpg", "25 (2).jpg", "25 (3).jpg", "25 (4).jpg", "25 (5).jpg"
+    ]
   }
 };
 
@@ -82,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+// 图片预览
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
