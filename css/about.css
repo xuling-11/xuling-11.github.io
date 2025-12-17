@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   padding: 0 5px;
 }
@@ -61,4 +61,13 @@
   max-height: 90vh;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+
+@media (max-width: 480px) {
+  .gallery {
+    gap: 5px;
+    padding: 0 0px;
+  }
 }
