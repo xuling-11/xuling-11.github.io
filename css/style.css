@@ -139,3 +139,36 @@ a:hover {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+
+
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+  .container { /* 顶部留白减半 */
+    padding-top: 1rem;
+  }
+  body { /* 缩小了1.8的行高 */
+    line-height: 1.6;
+  }
+  h1 { /* 缩小了2em的字体, 上下间距减半 */
+    font-size: 1.6em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 { /* 缩小了1.5em的字体 */
+    font-size: 1.3em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .nav-links a { /* 导航栏更紧凑 */
+    margin-right: 0.6rem;
+  }
+  .nav-button button{
+    border: none;
+    margin-left: 0.1rem;
+  }
+  .icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}

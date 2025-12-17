@@ -15,7 +15,6 @@
 }
 
 /* 姓名和拼音 */
-
 .name-cn {
   font-family: '楷体', sans-serif;
   font-weight: bold;
@@ -30,19 +29,30 @@
   color: var(--color-text-muted);
 }
 
-/* 访客计数 */
-.counter {
-  text-align: center;
-  font-style: italic;
-  margin-top: 30px;
-}
 
 /* 访客地图 */
 .visitor-map {
   display: block;
   margin: 0 auto;
-  width: 590px;
-  height: 300px;
+
+  width: 100%;
+  max-width: 590px;
+  aspect-ratio: 590 / 300;
+
   border-radius: 5%;
 }
 
+
+/* 移动端头像变小 */
+@media (max-width: 480px) {
+  .portrait {
+    width: 120px;
+    height: 120px;
+    margin-left: 12px;
+  }
+}
+
+/* 用于移动端姓名不被换行 */
+.name-block {
+  white-space: nowrap;
+}
