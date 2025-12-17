@@ -183,7 +183,7 @@ function renderList() {
     el.classList.add("blog-entry");
     el.innerHTML = `
       <a href="${item.file}" target="_blank" class="blog-title">${item.title}</a>
-      <span class="meta">${item.pages} pages, ${formatDate(item.date)}</span>
+      <span class="meta">${item.pages} pp. ${formatDate(item.date)}</span>
       <span class="tags">#${item.language} #${item.category}</span>
     `;
     container.appendChild(el);

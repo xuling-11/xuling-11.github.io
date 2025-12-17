@@ -8,16 +8,16 @@ let animationId = null;
 let backgroundEnabled = localStorage.getItem("backgroundEnabled") !== "false"; // 背景是否启用
 
 
-// 此处0.7*size可以改变画框大小
+// 此处0.7*size可以改变画框大小 (后改为1)
 function resizeCanvas() {
   const size = Math.min(window.innerWidth, window.innerHeight);
   const maxCanvasSize = 600;
 
-  canvas.width = Math.min(size * 0.7, maxCanvasSize);
-  canvas.height = Math.min(size * 0.7, maxCanvasSize);
+  canvas.width = Math.min(size * 1, maxCanvasSize);
+  canvas.height = Math.min(size * 1, maxCanvasSize);
 
-  canvas.style.width = `${size * 0.7}px`;
-  canvas.style.height = `${size * 0.7}px`;
+  canvas.style.width = `${size * 1}px`;
+  canvas.style.height = `${size * 1}px`;
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
