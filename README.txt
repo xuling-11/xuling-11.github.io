@@ -13,8 +13,7 @@ your-website/
 ├── css/
 │   ├── style.css
 │   ├── darkmode.css
-│   ├── index/project/blog/about.css
-│   └── responsive.css    ← 响应式样式(TODO)
+│   └── index/project/blog/about.css
 │
 ├── js/
 │   ├── darkmode.js
@@ -27,3 +26,4 @@ your-website/
 │   └── index/project/blog/about_file/
 │
 └── bin/
+
