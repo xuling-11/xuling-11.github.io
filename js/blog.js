@@ -4,6 +4,14 @@ const catFilter = document.getElementById("cat-filter");
 
 const data = [
   {
+    title: "科学斗地主",
+    file: "Blog_file/2512-科学斗地主(in process).pdf",
+    pages: 3,
+    date: "2025-12-22",
+    language: "中文",
+    category: "Modeling"
+  },
+  {
     title: "读书笔记: 简明复分析",
     file: "Blog_file/2505-《简明复分析》读书笔记.pdf",
     pages: 18,
@@ -229,4 +237,5 @@ document.querySelectorAll(".cat-btn").forEach(btn => {
     renderList();
   });
 });
+
 
