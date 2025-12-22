@@ -5,7 +5,7 @@ const catFilter = document.getElementById("cat-filter");
 const data = [
   {
     title: "科学斗地主",
-    file: "Blog_file/2512-科学斗地主(in process).pdf",
+    file: "assets/blog_file/2512-科学斗地主(in process).pdf",
     pages: 3,
     date: "2025-12-22",
     language: "中文",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     title: "读书笔记: 简明复分析",
-    file: "Blog_file/2505-《简明复分析》读书笔记.pdf",
+    file: "assets/blog_file/2505-《简明复分析》读书笔记.pdf",
     pages: 18,
     date: "2025-05-28",
     language: "中文",
@@ -21,7 +21,7 @@ const data = [
   },
   {
     title: "实分析与复分析笔记",
-    file: "Blog_file/2506-实复分析笔记.pdf",
+    file: "assets/blog_file/2506-实复分析笔记.pdf",
     pages: 12,
     date: "2025-06-16",
     language: "中文",
@@ -237,5 +237,6 @@ document.querySelectorAll(".cat-btn").forEach(btn => {
     renderList();
   });
 });
+
 
 
