@@ -1,7 +1,7 @@
-This website was built with the help of GPT.
+This website was built with the help of ChatGPT.
 It served as a hands-on way for me to learn web structure and development.
 
-your-website/
+xuling-11/
 │
 ├── index.html
 ├── project.html
