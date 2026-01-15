@@ -27,3 +27,5 @@ xuling-11/
 │
 └── bin/
 
+How to update:
+new image to About: compress image -> upload to assets -> add to js list
